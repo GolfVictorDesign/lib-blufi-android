@@ -30,14 +30,3 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components.release
-            }
-        }
-    }
-}
